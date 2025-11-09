@@ -1,45 +1,57 @@
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    const href = a.getAttribute('href')
-    if(href.length>1){
-      e.preventDefault()
-      document.querySelector(href).scrollIntoView({behavior:'smooth'})
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if (href.length > 1) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-  })
-})
-
-document.getElementById('year').textContent = new Date().getFullYear()
-
-const themeBtn = document.getElementById('themeToggle')
-themeBtn.addEventListener('click', ()=>{
-  const isDark = document.documentElement.hasAttribute('data-theme')
-  if(isDark){
-    document.documentElement.removeAttribute('data-theme')
-    themeBtn.textContent = '🌙'
-  } else {
-    document.documentElement.setAttribute('data-theme','dark')
-    themeBtn.textContent = '☀️'
-  }
-})
-
-const contactForm = document.getElementById('contactForm')
-if(contactForm){
-  contactForm.addEventListener('submit', (e)=>{
-  })
-}
-
-const themeToggle = document.getElementById('theme-toggle');
-const currentTheme = localStorage.getItem('theme');
-
-if (currentTheme) {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  themeToggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
-}
-
-themeToggle.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme');
-  const newTheme = current === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
-  themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+  });
 });
+
+// --- Set current year ---
+const yearEl = document.getElementById('year');
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
+
+// --- Dark Mode Toggle ---
+const themeToggle = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+if (themeToggle) {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    html.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '☀️';
+  } else {
+    html.removeAttribute('data-theme'); 
+    themeToggle.textContent = '🌙';
+  }
+
+  // Handle toggle click
+  themeToggle.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    if (isDark) {
+      html.removeAttribute('data-theme');
+      localStorage.setItem('theme', 'light');
+      themeToggle.textContent = '🌙';
+    } else {
+      html.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      themeToggle.textContent = '☀️';
+    }
+  });
+}
+
+// --- Contact Form ---
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    alert('Form submitted!');
+  });
+}
+

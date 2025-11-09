@@ -50,8 +50,10 @@ The website is lightweight, fast, and optimized for all screen sizes.
 ## Folder sturcture
 personal-website/
 ├── index.html
-├── style.css
-├── main.js
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
 ├── images/
 │   ├── profile.jpg
 │   └── preview.png

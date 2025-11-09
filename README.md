@@ -47,20 +47,6 @@ The website is lightweight, fast, and optimized for all screen sizes.
 
 ---
 
-## Folder sturcture
-personal-website/
-├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── main.js
-├── images/
-│   ├── profile.jpg
-│   └── preview.png
-└── README.md
-
----
-
 
 ## ⚙️ How to Run Locally
 Follow these steps to run the website on your local machine:

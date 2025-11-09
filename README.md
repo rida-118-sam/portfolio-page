@@ -47,6 +47,19 @@ The website is lightweight, fast, and optimized for all screen sizes.
 
 ---
 
+## Folder sturcture
+personal-website/
+├── index.html
+├── style.css
+├── main.js
+├── images/
+│   ├── profile.jpg
+│   └── preview.png
+└── README.md
+
+---
+
+
 ## ⚙️ How to Run Locally
 Follow these steps to run the website on your local machine:
 
@@ -61,12 +74,3 @@ cd your-repo
 # OR run a simple local server (Python 3)
 python -m http.server 8000
 
-## Folder sturcture
-personal-website/
-├── index.html
-├── style.css
-├── main.js
-├── images/
-│   ├── profile.jpg
-│   └── preview.png
-└── README.md

@@ -11,7 +11,7 @@ This website serves as my professional portfolio and personal brand identity.
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Preview
 ![Website preview](images/preview.png)
 
 ---

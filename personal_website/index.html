@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Rida Samrin — Software developer. Portfolio with projects, skills, and contact.">
+  <!-- Google Fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">Your Name</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="themeToggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section id="Intro" class="Intro">
+      <div class="container hero-grid">
+        <div class="Intro-text">
+          <h2>Hi, I’m <span class="accent">Rida Samrin</span></h2>
+          <p>Software developer who builds web apps, recommendation systems, and clean UIs. Open to internships & freelance.</p>
+          <p class="Intro-cta">
+            <a class="btn" href="#projects">See projects</a>
+          </p>
+        </div>
+        <div class="Intro-image">
+          <img src="images/profile.jpg" alt="Profile photo of Rida Samrin">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h3>About</h3>
+        <p>I’m a B.Tech student with hands-on experience in web development and a growing interest in cybersecurity. I enjoy building interactive, efficient, and secure web applications that blend design with functionality. My current focus includes Firebase, JavaScript, HTML/CSS, and security tools like Burp Suite, Wireshark, and TryHackMe. I love exploring how technology and security come together to create reliable digital experiences.</p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+   <section id="skills" class="section">
+    <div class="container">
+    <h3>Skills</h3>
+
+    <div class="skills-grid" role="list">
+      <!-- Web Development -->
+      <div class="skill-category" role="listitem" aria-labelledby="web-dev">
+        <h4 id="web-dev">Web Development</h4>
+        <ul class="skill-list">
+          <li>HTML5</li>
+          <li>CSS3 (Flexbox & Grid)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsive Design</li>
+          <li>Firebase (Auth, Firestore, Hosting)</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </div>
+
+      <!-- Cybersecurity -->
+      <div class="skill-category" role="listitem" aria-labelledby="cybersec">
+        <h4 id="cybersec">Cybersecurity</h4>
+        <ul class="skill-list">
+          <li>Burp Suite</li>
+          <li>Wireshark</li>
+          <li>TryHackMe / Hack The Box</li>
+          <li>Network Scanning & Recon</li>
+          <li>Web App Security (OWASP basics)</li>
+        </ul>
+      </div>
+
+      <!-- Programming -->
+      <div class="skill-category" role="listitem" aria-labelledby="programming">
+        <h4 id="programming">Programming & Algorithms</h4>
+        <ul class="skill-list">
+          <li>C / C++</li>
+          <li>Data Structures & Algorithms</li>
+          <li>Object-Oriented Programming</li>
+          <li>Python (basics)</li>
+        </ul>
+      </div>
+
+      <!-- Tools -->
+      <div class="skill-category" role="listitem" aria-labelledby="tools">
+        <h4 id="tools">Tools & Platforms</h4>
+        <ul class="skill-list">
+          <li>VS Code</li>
+          <li>Linux (terminal)</li>
+          <li>Figma (UI previews)</li>
+          <li>GitHub Pages</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h3>Projects</h3>
+        <div class="cards">
+          <!-- Project 1 -->
+          <article class="card">
+            <h4>Infi scroll</h4>
+            <p>Infinite Feed Recommendation Web App — A personalized content feed built with React and Firebase, featuring infinite scrolling, smart content recommendations, and user preference-based filtering.</p>
+            <p class="card-links">
+              <a href="https://github.com/rida-118-sam/SD009.git" target="_blank">Code</a> ·
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h3>Contact</h3>
+          <p>Interested in working together? Send me an email at <a href="mailto:ridasamrin811@gmail.com">ridasamrin811@gmail.com</a></p>
+          <p class="socials">
+            <a href="https://github.com/rida-118-sam" target="_blank">GitHub</a> ·
+            <a href="https://www.linkedin.com/in/rida-samrin-5b2330341?trk=contact-info" target="_blank">LinkedIn</a>
+          </p>
+        </div>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="2025"></span> Rida Samrin — Crafted with code</p>
+    </div>
+  </footer>
+
+  <script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
